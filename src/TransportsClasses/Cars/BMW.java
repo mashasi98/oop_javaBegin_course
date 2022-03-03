@@ -1,6 +1,15 @@
-package com.company;
+package TransportsClasses.Cars;
 
-public class BMW extends Car{
+
+
+public class BMW extends Car {
+    public BMW() {
+
+    }
+
+    public BMW(String name, String model, String color) {
+        super(name, model, color);
+    }
 
     @Override
     public void drive() {

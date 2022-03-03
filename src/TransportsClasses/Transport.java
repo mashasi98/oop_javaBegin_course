@@ -1,4 +1,4 @@
-package com.company;
+package TransportsClasses;
 
 public class Transport {
     private String name;
@@ -14,6 +14,9 @@ public class Transport {
         this.color = color;
     }
 
+    public Transport(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
@@ -42,7 +45,7 @@ public class Transport {
     public void drive(){
 
         if (name!=null){
-            System.out.println("Transport "+name+" is driving" );
+            System.out.println("TransportsClasses " +name+" is driving" );
         }else {
             System.out.println("Transport without name is driving" );
         }
@@ -50,7 +53,7 @@ public class Transport {
 
     public void stop(){
         if (name!=null){
-            System.out.println("Transport "+name+" is stopping" );
+            System.out.println("TransportsClasses " +name+" is stopping" );
         }else {
             System.out.println("Transport without name is stopping" );
         }

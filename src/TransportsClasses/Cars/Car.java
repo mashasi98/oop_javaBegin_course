@@ -1,10 +1,16 @@
-package com.company;
+package TransportsClasses.Cars;
+
+import TransportsClasses.Transport;
 
 public class Car extends Transport {
     private int number;
 
 
     public Car() {
+    }
+
+    public Car(String name) {
+        super(name);
     }
 
     public Car(String name, String model, String color, int number) {
@@ -32,7 +38,7 @@ public class Car extends Transport {
     public void drive() {
         String name =super.getName();
         if (name!=null) {
-            System.out.println("Car" + super.getName() + " is driving");
+            System.out.println("Car" + name + " is driving");
         }else {
             System.out.println("Car without name is driving" );
         }
@@ -52,7 +58,7 @@ public class Car extends Transport {
     public void signal(){
         String name =super.getName();
         if (name!=null) {
-            System.out.println("Car" + super.getName() + " is signaling");
+            System.out.println("Car" + name + " is signaling");
         }else {
             System.out.println("Car without name is signaling" );
         }
