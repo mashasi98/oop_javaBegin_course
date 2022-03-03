@@ -40,10 +40,20 @@ public class Transport {
     }
 
     public void drive(){
-        System.out.println("Transport "+this.name+" id driving ");
+
+        if (name!=null){
+            System.out.println("Transport "+name+" is driving" );
+        }else {
+            System.out.println("Transport without name is driving" );
+        }
     }
 
     public void stop(){
-        System.out.println("Transport "+name+" id stoping ");
+        if (name!=null){
+            System.out.println("Transport "+name+" is stopping" );
+        }else {
+            System.out.println("Transport without name is stopping" );
+        }
+
     }
 }
