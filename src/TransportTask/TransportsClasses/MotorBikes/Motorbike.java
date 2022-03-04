@@ -1,9 +1,11 @@
-package TransportsClasses.MotorBikes;
+package TransportTask.TransportsClasses.MotorBikes;
 
-import TransportsClasses.Transport;
+import TransportTask.TransportsClasses.Transport;
 
 public class Motorbike extends Transport {
     private double volume;
+    public final static int weelCount=4;
+
 
     public Motorbike() {
     }
@@ -19,6 +21,7 @@ public class Motorbike extends Transport {
 
     public Motorbike(double volume) {
         this.volume = volume;
+
     }
 
     public double getVolume() {

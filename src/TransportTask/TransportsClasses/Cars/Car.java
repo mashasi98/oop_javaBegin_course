@@ -1,9 +1,12 @@
-package TransportsClasses.Cars;
+package TransportTask.TransportsClasses.Cars;
 
-import TransportsClasses.Transport;
+import TransportTask.Details.Engine;
+import TransportTask.TransportsClasses.Transport;
 
 public class Car extends Transport {
     private int number;
+    private Engine engine;
+
 
 
     public Car() {
@@ -22,8 +25,9 @@ public class Car extends Transport {
         super(name, model, color);
     }
 
-    public Car(int number) {
+    public Car(int number,Engine engine) {
         this.number = number;
+        this.engine=engine;
     }
 
     public int getNumber() {
@@ -32,6 +36,13 @@ public class Car extends Transport {
 
     public void setNumber(int number) {
         this.number = number;
+    }
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
     }
 
     @Override

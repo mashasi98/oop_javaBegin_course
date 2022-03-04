@@ -1,4 +1,4 @@
-package TransportsClasses.MotorBikes;
+package TransportTask.TransportsClasses.MotorBikes;
 
 public class Kawasaki extends Motorbike{
 

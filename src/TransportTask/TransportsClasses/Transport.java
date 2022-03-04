@@ -1,4 +1,4 @@
-package TransportsClasses;
+package TransportTask.TransportsClasses;
 
 public class Transport {
     private String name;
@@ -59,4 +59,6 @@ public class Transport {
         }
 
     }
+
+
 }

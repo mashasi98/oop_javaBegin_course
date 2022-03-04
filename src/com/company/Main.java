@@ -1,36 +1,25 @@
 package com.company;
 
-import TransportsClasses.Cars.BMW;
-import TransportsClasses.Cars.Car;
-import TransportsClasses.MotorBikes.Kawasaki;
-import TransportsClasses.MotorBikes.Ural;
-import TransportsClasses.Transport;
+import RobotTask.AirplaneWing;
+import RobotTask.IWing;
+import RobotTask.Robokop;
+import RobotTask.Terminator;
+import TransportTask.TransportsClasses.MotorBikes.Kawasaki;
+import TransportTask.TransportsClasses.MotorBikes.Motorbike;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Transport transport = new Transport();
-        transport.setName("SomeTransport");
-        transport.drive();
-        transport.stop();
+        AirplaneWing airplaneWing = new AirplaneWing(200);
+        airplaneWing.open();
 
-        Car car = new Car();
-        car.setName(" SomeCar");
-        car.drive();
-        car.stop();
-        car.signal();
+        Robokop robokop = new Robokop("roboMe", airplaneWing);
 
-
-        BMW bmw = new BMW();
-        bmw.setName(" SomeBMW");
-        bmw.drive();
-
-        Kawasaki kawasaki = new Kawasaki("GHI-1","1234","blue",3.5,1990);
-        kawasaki.jump();
-
-        Ural ural = new Ural("ururur","ural-model","black",4.3,true);
-        ural.showInfo();
+        robokop.setWing(airplaneWing);
+        System.out.println(robokop.getWing().getSize());
+        robokop.move();
+        robokop.fly();
 
 
 
