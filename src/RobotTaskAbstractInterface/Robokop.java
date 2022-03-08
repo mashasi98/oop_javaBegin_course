@@ -21,6 +21,7 @@ public class Robokop extends ARobot {
 
     @Override
     public void fly() {
+        getWing().open();
         System.out.println("Robokop is flying with wings " + getWing().getSize());
     }
 
@@ -32,5 +33,9 @@ public class Robokop extends ARobot {
     @Override
     public IWing getWing() {
         return super.getWing();
+    }
+
+    public void takeGun(){
+        System.out.println(" robocop take gun");
     }
 }
