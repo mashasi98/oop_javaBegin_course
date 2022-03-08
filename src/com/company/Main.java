@@ -1,35 +1,26 @@
 package com.company;
 
-import CarTaskInterface.TeslaCar;
-import ComputerTask.Computer;
-import ComputerTask.Monitor;
-import RobotTaskAbstractInterface.AirplaneWing;
-import RobotTaskAbstractInterface.LittleWing;
-import RobotTaskAbstractInterface.Robokop;
-import TaskPrinter.Printer;
-
-import java.util.HashSet;
-import java.util.Set;
+import Paterns.Sinleton.TestSingleton;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        AirplaneWing airplaneWing = new AirplaneWing(200);
-        airplaneWing.open();
-        LittleWing littleWing =  new LittleWing(20);
-
+//        AirplaneWing airplaneWing = new AirplaneWing(200);
+//        airplaneWing.open();
+//        LittleWing littleWing =  new LittleWing(20);
 //
-        Robokop robokop = new Robokop("roboMe", airplaneWing);
-//
-        robokop.setWing(airplaneWing);
-        System.out.println(robokop.getWing().getSize());
-        robokop.move();
-        robokop.fly();
-        robokop.setWing(littleWing);
-        robokop.fly();
-        someMetod(String.valueOf(robokop.getWing().getSize()));
-        Set ыуе = new HashSet();
+////
+//        Robokop robokop = new Robokop("roboMe", airplaneWing);
+////
+//        robokop.setWing(airplaneWing);
+//        System.out.println(robokop.getWing().getSize());
+//        robokop.move();
+//        robokop.fly();
+//        robokop.setWing(littleWing);
+//        robokop.fly();
+//        someMetod(String.valueOf(robokop.getWing().getSize()));
+//        Set set = new HashSet();
 //
 //        TeslaCar teslaCar = new TeslaCar("Tesla");
 //        teslaCar.drive();
@@ -48,10 +39,8 @@ public class Main {
 //        printer.charge(5);
 //        printer.print("Hello world");
 
-
+        System.out.println(TestSingleton.getIntanse());
     }
 
-    public static void someMetod(String s){
-        System.out.println(s);
-    }
+
 }
