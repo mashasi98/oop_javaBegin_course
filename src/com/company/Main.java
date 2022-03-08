@@ -1,6 +1,14 @@
 package com.company;
 
-import Paterns.Sinleton.TestSingleton;
+import Paterns.Factory.CarSelector;
+import Paterns.Factory.Enums.PlaneType;
+import Paterns.Factory.Interfaces.IAirplaneFactory;
+import Paterns.Factory.Interfaces.ICarFactory;
+import Paterns.Factory.Enums.RoadType;
+import Paterns.Factory.RussianTransport;
+
+import static Paterns.Factory.CarSelector.getIntanseFactory;
+import static Paterns.Factory.RussianTransport.getTransportIntance;
 
 public class Main {
 
@@ -39,7 +47,23 @@ public class Main {
 //        printer.charge(5);
 //        printer.print("Hello world");
 
-        System.out.println(TestSingleton.getIntanse());
+//        System.out.println(TestSingleton.getIntanse());
+
+        CarSelector factoryFor=getIntanseFactory();
+        RussianTransport factoryRus= getTransportIntance();
+
+        ICarFactory carForCity= factoryFor.createCar(RoadType.CYTY);
+        carForCity.drive();
+
+        ICarFactory carRusCity = factoryRus.createCar(RoadType.CYTY);
+        carRusCity.drive();
+
+        IAirplaneFactory airFor= factoryFor.createAirplane(PlaneType.BOENG757);
+        airFor.fly();
+
+
+
+
     }
 
 
